@@ -25,7 +25,7 @@ class ImageHandler(object):
 
         _count = 1
         img_location = None
-        while not True:
+        while True:
             img_location = pyautogui.locateOnScreen(image_path, grayscale=True)
             if img_location is not None:
                 print "*INFO* wait_for_image() - Expected image has been displayed on the screen"
