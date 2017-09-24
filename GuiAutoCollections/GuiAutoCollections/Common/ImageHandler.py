@@ -36,8 +36,8 @@ class ImageHandler(object):
                 _count += 1
                 time.sleep(1)
             else:
-                print "*FAIL* wait_for_image() - Can't find image after 5 seconds"
-                raise RuntimeError("wait_for_image() - Can't find image after 5 seconds")
+                print "*FAIL* wait_for_image() - Can't find image after %d seconds" % _timeout
+                raise RuntimeError("wait_for_image() - Can't find image after %d seconds") % _timeout
         return img_location
 
     def get_image_location(self, image_path):
